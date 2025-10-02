@@ -8,10 +8,10 @@
 		<version>3.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.GHouse</groupId>
-	<artifactId>GHouse</artifactId>
+	<groupId>com.GHouseApi</groupId>
+	<artifactId>GHouseApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GHouse API</name>
+	<name>GHouseApi</name>
 	<description>GHouse: administration finances and accounts the house</description>
 	<url/>
 	<licenses>
