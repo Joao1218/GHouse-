@@ -1,11 +1,17 @@
 package com.GHouseApi.GHouseApi.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name = "produtos_compra")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 public class productsShopModel {
 
     @Id
