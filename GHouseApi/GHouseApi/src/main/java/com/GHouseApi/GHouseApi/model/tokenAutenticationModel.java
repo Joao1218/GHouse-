@@ -19,5 +19,5 @@ public class tokenAutenticationModel {
     private UUID id;
     private UUID idUser;
     private String token;
-    private LocalDate dataExpirecao;
+    private LocalDate dataExpiracao;
 }
