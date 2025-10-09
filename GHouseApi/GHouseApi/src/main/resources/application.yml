@@ -2,9 +2,9 @@
   application:
     name: GHouseApi
   datasource:
-    url:
-    username: toDoList
-    password: toDolist
+    url: jdbc:postgresql://localhost:5432/GHouse
+    username: GHouse_admin
+    password: AdminGHouse
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
