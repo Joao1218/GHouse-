@@ -17,9 +17,9 @@ public class productsShopModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-
     private UUID idCompra;
     private UUID idProduto;
     private Integer quantidade;
     private Double precoUnitario;
+    private Double subtotal;
 }

@@ -4,7 +4,6 @@ import com.GHouseApi.GHouseApi.enums.productsEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity

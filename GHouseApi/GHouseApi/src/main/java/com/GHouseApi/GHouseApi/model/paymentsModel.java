@@ -1,5 +1,6 @@
 package com.GHouseApi.GHouseApi.model;
 
+import com.GHouseApi.GHouseApi.enums.paymentsEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,8 +21,9 @@ public class paymentsModel {
 
     private UUID idUsuario;
     private UUID idConta;
+    private UUID idFamilia;
     private LocalDate dataPagamento;
     private String comprovantePagamento;
-    private UUID idFamilia;
+    private paymentsEnum status;
 
 }
