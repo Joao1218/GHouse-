@@ -1,7 +1,9 @@
 package com.GHouseApi.GHouseApi.dto;
 
+import com.GHouseApi.GHouseApi.enums.paymentsEnum;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
-public record paymentsDTO(String fotoComprovante, LocalDate dataPagamento, String status, UUID idConta, UUID idUser) {
+public record paymentsDTO(String fotoComprovante, LocalDate dataPagamento, paymentsEnum status) {
 }

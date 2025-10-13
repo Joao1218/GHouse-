@@ -1,4 +1,6 @@
 package com.GHouseApi.GHouseApi.dto;
 
-public record productsDTO(String nome, String descricao, String categoria, Double preco) {
+import com.GHouseApi.GHouseApi.enums.productsEnum;
+
+public record productsDTO(String nome, String descricao, productsEnum categoria, Double preco) {
 }
