@@ -8,15 +8,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface userRepository extends JpaRepository<userModel, UUID> {
-    @Override
-    List<userModel> findAll();
 
-    @Override
-    Optional<userModel> findById(UUID uuid);
-
-    @Override
-    <S extends userModel> S save(S entity);
-
-    @Override
-    void deleteAllById(Iterable<? extends UUID> uuids);
 }
