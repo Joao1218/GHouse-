@@ -1,15 +1,19 @@
 package com.GHouseApi.GHouseApi.mappers;
 
-import com.GHouseApi.GHouseApi.dto.userDTO;
+import com.GHouseApi.GHouseApi.dto.usuarios.userRequestDTO;
+import com.GHouseApi.GHouseApi.dto.usuarios.userResponseDTO;
+import com.GHouseApi.GHouseApi.enums.userEnum;
 import com.GHouseApi.GHouseApi.model.userModel;
+import org.springframework.stereotype.Component;
 
+import java.util.UUID;
+
+@Component
 public class userMapper {
-
-    public static userModel dtoEmUsuario(userDTO userDTO){
-        return new userModel(null, userDTO.nome(), userDTO.emails(), null, null, userDTO.familias());
+    public userResponseDTO modelEmDto(userModel model){
+        return new userResponseDTO(model.getId(),model.getNome(), model.getEmail(), model.getPassword());
     }
-
-    public static userDTO userEmDTO(userModel userModel){
-        return new userDTO(userModel.getNome(), userModel.getEmail(), userModel.getFamilias());
+    public userModel dtoEmModel(userRequestDTO dto){
+        return new userModel(null, dto.nome(), dto.email(), userEnum.USER, dto.password(), null);
     }
 }

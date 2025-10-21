@@ -1,7 +1,7 @@
 package com.GHouseApi.GHouseApi.enums;
 
 public enum userEnum {
-    USER,
     ADMIN,
-    ADMIN_FAMILY
+    ADMIN_FAMILY,
+    USER
 }

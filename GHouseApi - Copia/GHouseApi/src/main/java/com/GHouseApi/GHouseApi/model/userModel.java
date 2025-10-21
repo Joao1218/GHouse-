@@ -5,8 +5,9 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 
 @Entity
 @Table(name = "usuarios")
@@ -19,7 +20,7 @@ public class userModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
-    private String id;
+    private UUID id;
 
     @Column(nullable = false, length = 100)
     private String nome;
@@ -27,23 +28,12 @@ public class userModel {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
-    @Column(name = "usuarios_permissoes", nullable = false)
-    @Enumerated(EnumType.STRING)
+    @Column(name = "usuarios_permissoes", nullable = false, length = 100)
     private userEnum usuario_permissoes;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String password;
 
-    @Column(name = "data_cadastro")
-    private LocalDate dataCadastro;
-
-    @PrePersist
-    public void prePersistId() throws Exception{
-        if (id == null) {
-            id = UUID.randomUUID().toString();
-        }
-        if (dataCadastro == null) {
-            dataCadastro = LocalDate.from(LocalDateTime.now());
-        }
-    }
+    @ManyToMany
+    private Set<familyModel> familias = new HashSet<>();
 }
